@@ -41,7 +41,7 @@ const App = () => {
 
     const noteFormRef = useRef()
 
-    const addNote = (noteObject) => {
+    const createNote = (noteObject) => {
         noteService
             .create(noteObject)
             .then(returnedNote => {
@@ -135,7 +135,7 @@ const App = () => {
             { user &&
         <Togglable buttonLabel='new note' ref={noteFormRef}>
             <NoteForm
-                addNote={addNote}
+                addNote={createNote}
             />
         </Togglable>
             }
